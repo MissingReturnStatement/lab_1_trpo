@@ -8,6 +8,8 @@ CONFIG += c++17 cmdline
 
 SOURCES += \
         file.cpp \
+        ilog.cpp \
+        log.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -16,4 +18,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    file.h
+    file.h \
+    ilog.h \
+    log.h
