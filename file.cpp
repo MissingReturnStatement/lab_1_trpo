@@ -12,7 +12,7 @@ void File::updateStatus()
     bool existance = file_info.exists();
     int new_size = file_info.size();
     if (size != new_size || existing != existance){
-        emit fileChanged();
+        emit fileChanged(this);
         size = new_size;
         existing = existance;
     }

@@ -24,7 +24,7 @@ public:
     }
     void updateStatus();
 signals:
-    fileChanged();
+    fileChanged(File*);
 };
 
 #endif // FILE_H
