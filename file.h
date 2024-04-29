@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QFileInfo>
+#include <QTextStream>
 
 class File : public QObject
 {
@@ -24,7 +25,7 @@ public:
     }
     void updateStatus();
 signals:
-    fileChanged(File*);
+    fileChanged(File*, bool);
 };
 
 #endif // FILE_H

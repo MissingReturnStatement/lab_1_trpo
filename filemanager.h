@@ -10,8 +10,8 @@ class FileManager : public QObject
     Q_OBJECT
 public:
     static FileManager& Instance(ILog* l){
-        static FileManager f(l);
-        return f;
+        static FileManager file_manager(l);
+        return file_manager;
     }
     void addFile(QString path);
     void updateFileStatus();
@@ -25,7 +25,7 @@ public:
 signals:
     writeChanges(QString str);
 public slots:
-    void fileChanged(File*);
+    void fileChanged(File*,bool);
 };
 
 #endif // FILEMANAGER_H
